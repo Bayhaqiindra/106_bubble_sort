@@ -3,10 +3,10 @@ using namespace std;
 
 
 int a[20];               //Deklarasi array a dengan ukuran 20 
-int n;                     //Deklarasi variasi n untuk menyimpan banyak elemen pada aray 
+int n;                   //Deklarasi variasi n untuk menyimpan banyak elemen pada aray 
 
 void input() {            // prosedur untuk input 
-	while (true) {           // loping
+	while (true) {        // loping
 		cout << "masukan banyak elemen pada array : "; // Output ke larar 
 		cin >> n;         // input dari pengguna 
 		if (n <= 20)      // jika keluar dari atau sama dengan 20
@@ -35,4 +35,35 @@ void bubbleSortArray() {	//procedur untuk mengurutkan array dengan metode bubble
 			}
 		}
 	}
+}
+
+void unsorted() {
+	cout << endl;							//output baris kosong
+	cout << "==================================" << endl; //Output ke layar
+	cout << "Element Array yang belum tersusun" << endl; //Output ke layar
+	cout << "==================================" << endl; //Output ke Layar
+	for (int j = 0; j < n; j++) {							//Looping dengan j dari 0 hingga n-1
+		cout << a[j] << endl;								// Output ke Layar
+	}
+	cout << endl;
+}
+
+void display() {	// procedur untuk menampilkan hasil
+	cout << endl;							//output baris kosong
+	cout << "==================================" << endl; //Output ke layar
+	cout << "Element Array yang belum tersusun" << endl; //Output ke layar
+	cout << "==================================" << endl; //Output ke Layar
+	for (int j = 0; j < n; j++) {							//Looping dengan j dari 0 hingga n-1
+		cout << a[j] << endl;								// Output ke Layar
+	}
+	cout << endl;
+}
+
+int main() {
+	input();	// Memanggil procedur read()
+	unsorted();	  //Memanggil proceedur unsorted() dari
+	bubbleSortArray();  // Memanggil procedur  bubbleSortArray()
+	display();		// Memanggil procedur display()
+
+	return 0;
 }
